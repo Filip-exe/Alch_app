@@ -1,0 +1,7 @@
+{% extends "zaklad.html" %}
+{% block body %}
+    <form action="/register" method="post">
+        <input name="name", autocomplete="off" placeholder="Tvoje krstne meno" type="text" autofocus>
+        <button type="submit">Register</button>
+    </form>
+{% endblock %}

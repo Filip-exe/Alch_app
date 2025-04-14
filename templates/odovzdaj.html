@@ -1,0 +1,82 @@
+{% extends "zaklad.html" %}
+{% block body %}
+<div class="row" style="margin-top: 130px;">
+  <div class="col"></div>
+  <div class="col-6">
+    <div class="row">
+      <div class="col">
+        <form action="/odovzdaj" method="post">
+          <select id="selectMagistro" name="magistro" aria-label="Select magistro ingredient">
+            <option value = "Obria" selected>Obria krv</option>
+            <option value="Krv" for="magistro">Krv šlachtica</option>
+            <option value="Slzy" for="magistro">Slzy banší</option>
+            <option value="Jed" for="magistro">Jed sepie</option>
+            <option value="Krysodlacia" for="magistro">Krysodlacia krv</option>
+            <option value="Moc" for="magistro">Moc netopiera</option>
+            <option value="Plesen" for="magistro">Plesen múmie</option>
+            <option value="Sliz" for="magistro">Vodníkov sliz</option>
+            <option value="Sliny" for="magistro">Sliny wyverna</option>
+            <option value="Koza" for="magistro">Koža salamandra</option>          
+          </select>
+      </div>
+      <div class="col">
+        <select id = "selectCommon" name ="common" aria-label="Select common ingredient">
+          <option value="Piesok" selected>Piesok z priekopy</option>
+          <option value="Bulvy">Žabie Bulvy</option>
+          <option value="Zobak">Vraní Zobak</option>
+          <option value="Krystal">Hosrký Kryštál</option>
+          <option value="Mixtura">Mixtura fabulosa</option>
+          <option value="Ligusticum">Ligusticum</option>
+          <option value="Nigrumteum">Nigrumteum</option>
+          <option value="Roh">Roh jednorožca</option>
+          <option value="Turmericum">Turmericum</option>
+          <option value="Zlazy">Tchorie žľazy</option>
+        </select>
+      </div>
+    </div> <!--row-->
+    <div class="row">
+      <div class="col text-center">
+        <select name="vyberElixiru" id = "selectElixir" style="margin-top: 100px; width: 150px; background-color: rgb(207, 102, 119); text-align: center;">
+          <option value="Nadeje" selected>Nádeje</option>
+          <option value="Sily">Sily</option>
+          <option value="Mudrosti">Mudrosti</option>
+          <option value="Nehy">Nehy</option>
+          <option value="Strachu">Strachu</option>
+          <option value="Lasky">Lasky</option>
+          <option value="Bojovnosti">Bojovnosti</option>
+          <option value="Odvahy">Odvahy</option>,
+          <option value="Ohavnosti">Ohavnosti</option>
+          <option value="Smrti">Smrti</option>
+          <option value="Zivota">Života</option>
+          <option value="Krasy">Krásy</option>
+          <option value="Poznania">Poznania</option>
+          <option value="Mladosti">Mladosti</option>
+          <option value="Stastia">Štastia</option>
+          <option value="Pomatenosti">Pomatenosti</option>
+          <option value="Lenivosti">Lenivosti</option>
+          <option value="Radosti">Radosti</option>
+          <option value="Rychlosti">Rýchlosti</option>
+          <option value="Spanku">Spánku</option>
+        </select>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 60px;">
+      <div class="col text-center">
+        <button class="myButton" type="submit">
+          <span style="font-size: 30px; font-weight: bold;">Odovzdaj</span>
+        </button>
+      </div>
+    </div> <!--row-->
+    </form> 
+    <div class="spat">
+        {{ vysledok }}
+    </div>
+    <div style="margin-top: 200px;">
+      <form action="/" method="get">
+          <button type="submit">Spat</button>
+      </form>
+    </div>
+  </div>
+  <div class="col"><div>
+</div>
+{% endblock %}

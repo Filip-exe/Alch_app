@@ -1,0 +1,36 @@
+rozvrhSuroviny = [
+    "Jed sepie, Zabie bulvy, Krýštál",
+    "Vraní zobák, Krysodlačia krv, Tchorie žlazy, Moč netopiera",
+    "Obria Krv, Roh jednorožca, Krv šlachtica, Krcma",
+    "Tumericum, Koža salamandra, Pleseň z múmie",
+    "Vodnikov sliz, Piesok, Slzy banší",
+    "Vraní zobák, Sliny z wyverna, Kasino?, Nigrumteum",
+    "Krv šlachtica, Tchorie žlazy",
+    "Jed sepie, Pleseň u múmie, Krysodlačia krv",
+    "Koža salamandra, Tumericum, Piesok",
+    "Kryštal, Nigrumteum, Vodnikov sliz, Divadlo?",
+    "Žabie bulvy, Sliny wyverna, Moč netopiera",
+    "Obria krv, Slzy banší, Flexibilne, Flexibilne, Flexibilne",
+] vlastnictvo = { "Jed sépie": 0,
+"Krysodlačia krv": 0,
+"Moč netopiera": 0,
+"Obria Krv": 0,
+"Krv šlachtica": 0,
+"Koža salamandra": 0,
+"Pleseň z múmie": 0,
+"Vodnikov sliz": 0,
+"Sliny z wyverna": 0,
+"Slzy banší": 0,
+"Tchorie žlazy": 0,
+"Nigrumteum": 0,
+"Zabie bulvy": 0,
+"Krýštál": 0,
+"Vraní zobák": 0,
+"Roh jednorožca": 0,
+"Tumericum": 0,
+"Piesok": 0,
+} PRAGMA table_info(vlastnictvo);
+UPDATE vlastnictvo
+SET Krysodlacia = 3;
+SELECT Krystal
+FROM vlastnictvo;

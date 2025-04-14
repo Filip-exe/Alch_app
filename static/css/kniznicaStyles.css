@@ -1,0 +1,11 @@
+body {
+    padding: 250px;
+    text-align: center;
+    background-image: url("/static/images/scroll.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:contain;
+    font-size: 25px;
+    
+}
+

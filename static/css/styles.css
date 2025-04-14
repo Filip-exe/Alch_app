@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+
+select {
+  width: 170px;
+  height: 60px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.noveElixiry {
+  margin-bottom: 300px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.kniznicaElixirov {
+  position: absolute;
+  bottom: 10%;
+  text-align: left;
+}
+
+.odovzdaj {
+  border-radius: 20px;
+  text-align: center;
+  font-size: 30px;
+  background-color: orange;
+}
+
+.rozvrh {
+  text-align: left;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.vlastnis {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  float: right;
+  margin-top: 30px;
+}
+
+#selectCommon{
+  margin-left: 65%;
+  background-color: lightgray;
+}
+
+#selectMagistro{
+  float: right;
+  margin-right: 65%;
+  background-color: rgba(24, 6, 185, 0.856);
+  color: rgb(255, 123, 0)
+}
+
+#selectElixir {
+  text-align: center;
+}
+
+.nedostatok{
+  margin-top: 50%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.spat {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.td {
+  border:2px solid black;
+}
+
+.registracia {
+  text-align: right;
+  color: black;
+  font-size: 20px;
+}
+
+body{
+  margin:0;
+  padding:0;
+  background-color:#292929;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  
+}
+  
+&::before {
+  content: '';
+  position: absolute;
+  background-image: url("/static/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+}
+
+
+.myButton {
+  margin-left: 14px;
+  width: 136px; 
+  height: 136px;
+  border-radius: 100%;
+  background-color:#eccc2c;
+  border:5px solid #bb8b08;
+  transition: all .85s cubic-bezier(0.25, 1, 0.33, 1);
+  box-shadow: 0 30px 85px rgba(0,0,0,0.14), 0 15px 35px rgba(0,0,0,0.14);
+}
+
+.myButton:hover {
+  transform:scale(0.8);
+  box-shadow: 0 20px 55px rgba(0,0,0,0.14), 0 15px 35px rgba(0,0,0,0.14);
+}
+
+.answer {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.idk {
+  margin-left: 14px;
+  width: 136px; 
+  height: 136px; 
+  background-color: transparent;
+  display:block;
+  position:absolute;
+  border-radius:100%;
+  border:5px solid #e0c644;
+  box-sizing:border-box;
+  transition: all .85s cubic-bezier(0.25, 1, 0.33, 1);
+  box-shadow: 0 30px 85px rgba(0,0,0,0.14), 0 15px 35px rgba(0,0,0,0.14);
+}
+.my-super-cool-btn:hover span:before{
+  transform:scale(0.8);
+  box-shadow: 0 20px 55px rgba(0,0,0,0.14), 0 15px 35px rgba(0,0,0,0.14);
+}
+.my-super-cool-btn .dots-container{
+  opacity:0;
+  animation: intro 1.6s;
+  animation-fill-mode: forwards;
+}
+.my-super-cool-btn .dot{
+  width:8px;
+  height:8px;
+  display:block;
+  background-color:#F3CF14;
+  border-radius:100%;
+  position:absolute;
+  transition: all .85s cubic-bezier(0.25, 1, 0.33, 1);
+}
+.my-super-cool-btn .dot:nth-child(1){
+  top:50px;
+  left:50px;
+  transform:rotate(-140deg);
+  animation: swag1-out 0.3s;
+  animation-fill-mode: forwards;
+  opacity:0;
+}
+.my-super-cool-btn .dot:nth-child(2){
+  top:50px;
+  right:50px;
+  transform:rotate(140deg);
+  animation: swag2-out 0.3s;
+  animation-fill-mode: forwards;
+  opacity:0;
+}
+.my-super-cool-btn .dot:nth-child(3){
+  bottom:50px;
+  left:50px;
+  transform:rotate(140deg);
+  animation: swag3-out 0.3s;
+  animation-fill-mode: forwards;
+  opacity:0;
+}
+.my-super-cool-btn .dot:nth-child(4){
+  bottom:50px;
+  right:50px;
+  transform:rotate(-140deg);
+  animation: swag4-out 0.3s;
+  animation-fill-mode: forwards;
+  opacity:0;
+}
+.my-super-cool-btn:hover .dot:nth-child(1){
+  animation: swag1 0.3s;
+  animation-fill-mode: forwards;
+}
+.my-super-cool-btn:hover .dot:nth-child(2){
+  animation: swag2 0.3s;
+  animation-fill-mode: forwards;
+}
+.my-super-cool-btn:hover .dot:nth-child(3){
+  animation: swag3 0.3s;
+  animation-fill-mode: forwards;
+}
+.my-super-cool-btn:hover .dot:nth-child(4){
+  animation: swag4 0.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes intro {
+   0% {
+     opacity:0;
+  }
+  100% {
+     opacity:1;
+  }
+}
+@keyframes swag1 {
+   0% {
+     top:50px;
+     left:50px;
+     width:8px;
+  }
+  50% {
+    width:30px;
+    opacity:1;
+  }
+  100% {
+     top:20px;
+     left:20px;
+     width:8px;
+     opacity:1;
+  }
+}
+@keyframes swag1-out {
+   0% {
+     top:20px;
+     left:20px;
+     width:8px;
+  }
+  50% {
+     width:30px;
+    opacity:1;
+  }
+  100% {
+     top:50px;
+     left:50px;
+     width:8px;
+    opacity:0;
+  }
+}
+@keyframes swag2 {
+   0% {
+     top:50px;
+     right:50px;
+     width:8px;
+  }
+  50% {
+    width:30px;
+    opacity:1;
+  }
+  100% {
+     top:20px;
+     right:20px;
+     width:8px;
+     opacity:1;
+  }
+}
+@keyframes swag2-out {
+   0% {
+     top:20px;
+     right:20px;
+     width:8px;
+  }
+  50% {
+     width:30px;
+    opacity:1;
+  }
+  100% {
+     top:50px;
+     right:50px;
+     width:8px;
+    opacity:0;
+  }
+}
+@keyframes swag3 {
+   0% {
+     bottom:50px;
+     left:50px;
+     width:8px;
+  }
+  50% {
+    width:30px;
+    opacity:1;
+  }
+  100% {
+     bottom:20px;
+     left:20px;
+     width:8px;
+     opacity:1;
+  }
+}
+@keyframes swag3-out {
+   0% {
+     bottom:20px;
+     left:20px;
+     width:8px;
+  }
+  50% {
+     width:30px;
+    opacity:1;
+  }
+  100% {
+     bottom:50px;
+     left:50px;
+     width:8px;
+    opacity:0;
+  }
+}
+@keyframes swag4 {
+   0% {
+     bottom:50px;
+     right:50px;
+     width:8px;
+  }
+  50% {
+    width:30px;
+    opacity:1;
+  }
+  100% {
+     bottom:20px;
+     right:20px;
+     width:8px;
+     opacity:1;
+  }
+}
+@keyframes swag4-out {
+   0% {
+     bottom:20px;
+     right:20px;
+     width:8px;
+  }
+  50% {
+     width:30px;
+    opacity:1;
+  }
+  100% {
+     bottom:50px;
+     right:50px;
+     width:8px;
+    opacity:0;
+  }
+}

@@ -1,0 +1,117 @@
+{% extends "zaklad.html" %}
+{% block body %}
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <form action="/dalsiDen" method="post">
+            <button type="submit">Dalsi den</button>
+          </form>
+          <div class="rozvrh">
+            Den: {{ cisloDna }}
+            <br>
+            Dnes si ziskal: <br> 
+            {% for sur in ziskaneSuroviny %}
+              {{ sur }}
+              <br>
+            {% endfor %}
+          </div>
+          <div class="noveElixiry">
+            Dnes si sa naucil ze: <br>
+            {% for elixir in noveElixiry %}
+              Elixir {{ elixir.elixir }} sposobuje: <br>
+              {{ elixir.priznaky }}
+              <br><br>
+            {% endfor %}
+          </div>
+
+          <div class="kniznicaElixirov">
+            <form action="/kniznica">
+              <button type="submit">Kniznica elixirov</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col text-center display-1 mt-5"><strong>ALCHEMIA</strong>
+            </div>
+          </div> <!--row-->
+        <div class="row" style="margin-top: 130px;">
+          <div class="col">
+            <form action="/cooking" method="post">
+              <select id="selectMagistro" name="magistro" aria-label="Select magistro ingredient">
+                <option value = "Obria" selected>Obria krv</option>
+                <option value="Krv" for="magistro">Krv šlachtica</option>
+                <option value="Slzy" for="magistro">Slzy banší</option>
+                <option value="Jed" for="magistro">Jed sepie</option>
+                <option value="Krysodlacia" for="magistro">Krysodlacia krv</option>
+                <option value="Moc" for="magistro">Moc netopiera</option>
+                <option value="Plesen" for="magistro">Plesen múmie</option>
+                <option value="Sliz" for="magistro">Vodníkov sliz</option>
+                <option value="Sliny" for="magistro">Sliny wyverna</option>
+                <option value="Koza" for="magistro">Koža salamandra</option>          
+              </select>
+            </div>
+          <div class="col">
+              <select id = "selectCommon" name ="common" aria-label="Select common ingredient">
+                <option value="Piesok" selected>Piesok z priekopy</option>
+                <option value="Bulvy">Žabie Bulvy</option>
+                <option value="Zobak">Vraní Zobak</option>
+                <option value="Krystal">Hosrký Kryštál</option>
+                <option value="Mixtura">Mixtura fabulosa</option>
+                <option value="Ligusticum">Ligusticum</option>
+                <option value="Nigrumteum">Nigrumteum</option>
+                <option value="Roh">Roh jednorožca</option>
+                <option value="Turmericum">Turmericum</option>
+                <option value="Zlazy">Tchorie žľazy</option>
+              </select>
+          </div>
+      </div> <!--row-->
+          <div class="row" style="margin-top: 60px;">
+            <div class="col text-center">
+              <button class="myButton" type="submit">
+                <span style="font-size: 30px; font-weight: bold;">MIX</span>
+              </button>
+            </div>
+          </div> <!--row-->
+        </form> 
+          <div class="row" style="margin-top: 210px;">
+            <div class="col text-center">
+              <span id="answer" style="font-size: 30px; font-weight: bold;">{% block div %}{% endblock %}</span>
+            </div>
+          </div>
+          <div class="col text-center">
+            <form action="/odovzdaj">
+              <button type="submit" class="odovzdaj">Odovzdaj</button>
+            </form>
+          </div>
+        </div>
+      <div class="col">
+        <div class="registracia">Si prihlaseny ako <span style="color: red;">{{ prihlasenie }}</span>
+          <form action="/deregister">
+            <button type="submit">Odhlasit sa</button>
+          </form>
+          <form action="/reset">
+            <button style="margin-top: 10px;" type="submit">Reset</button>
+          </form>
+        </div>
+       <div class="vlastnis"> Vlastnis: <br>
+        <table class="td" style="width: 100%;">
+          <tr>
+            <th class="td" style="width: 80%;">Surovina</th>
+            <th class="td">Pocet</th>
+          </tr>
+            {% for key in keys %}
+              {% if key != 'username' and key != 'den' and vlastnictvoDict[key] != 0 %}
+            <tr>
+              <td class="td">{{ key }}</td>
+              <td class="td">{{ vlastnictvoDict[key] }}</td>
+            </tr>
+              {% endif %}
+            {% endfor %}
+        </table>
+                                  
+       </div>
+      </div>  
+    </div>
+  </div>
+{% endblock %}

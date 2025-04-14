@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/kniznicaStyles.css" />
+    <title>Kniznica</title>
+</head>
+<body>
+        <div class="kniznicaVnutro">
+            Elixir: priznaky <br><br>
+        {% for riadok in znameElixiry %}
+            Elixir <span style="color: red;">{{ riadok.elixir }}</span>: <span style="color: rgb(50, 14, 182);">{{ riadok.priznaky }}
+            
+            <br>
+        {% endfor %}
+        <form action="/" method="get">
+            <button type="submit">Spat</button>
+        </form>
+        </div>
+
+</body>
+</html>    
